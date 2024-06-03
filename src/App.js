@@ -1,9 +1,11 @@
 import './App.css';
 
+import Register from './Pages/Register';
+
 export default function App() {
   return (
     <div>
-      <h1>Hello!</h1>
+      <Register />
     </div>
   );
 }
