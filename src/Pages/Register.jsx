@@ -2,10 +2,10 @@ import React from 'react'
 
 export default function Register() {
     return (
-        <div className="register-container">
-            <div className="register-form">
-                <span>Chat App</span>
-                <span>Register</span>
+        <div className="form-container">
+            <div className="form-wrapper">
+                <span className="logo">Chat App</span>
+                <span className="title">Register</span>
 
                 <form>
                     <input type="text" placeholder="Name..." />

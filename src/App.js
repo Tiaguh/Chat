@@ -1,4 +1,5 @@
 import './App.css';
+import './style.scss'
 
 import Register from './Pages/Register';
 
