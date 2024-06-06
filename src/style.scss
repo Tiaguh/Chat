@@ -10,7 +10,7 @@
 
     .form-wrapper {
         width: 30vw;
-        height: 75vh;
+        height: 70vh;
 
         display: flex;
         flex-direction: column;
@@ -48,7 +48,7 @@
 
                 border: none;
                 border-bottom: 1px solid #a7bcff;
-            
+
                 margin-top: 5px;
 
                 &::placeholder {
@@ -67,6 +67,18 @@
                 cursor: pointer;
                 color: #FFF;
                 background-color: #7b96ec;
+            }
+
+            label {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                h3 {
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 14px;
+                    color: #7b96ec;
+                }
             }
         }
 

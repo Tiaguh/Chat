@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { MdPhoto } from "react-icons/md";
+
 export default function Login() {
     return (
         <div className="form-container">
@@ -8,13 +10,11 @@ export default function Login() {
                 <span className="title">Login</span>
 
                 <form>
-                    <input type="text" placeholder="Name..." />
                     <input type="email" placeholder="Email..." />
                     <input type="password" placeholder="Password..." />
-                    <input type="file" />
-                    <button>Sign Up</button>
+                    <button>Sign In</button>
                 </form>
-                <p>You do have an account? Login</p>
+                <p>You don't have an account? Register</p>
             </div>
         </div>
     )

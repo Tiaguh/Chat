@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { MdPhoto } from "react-icons/md";
+
 export default function Register() {
     return (
         <div className="form-container">
@@ -11,7 +13,14 @@ export default function Register() {
                     <input type="text" placeholder="Name..." />
                     <input type="email" placeholder="Email..." />
                     <input type="password" placeholder="Password..." />
-                    <input type="file" />
+                    <input
+                        style={{ display: "none" }}
+                        type="file" id="file"
+                    />
+                    <label htmlFor="file">
+                        <MdPhoto color="#a7bcff" size={30} />
+                        <h3>Add an avatar</h3>
+                    </label>
                     <button>Sign Up</button>
                 </form>
                 <p>You do have an account? Login</p>
