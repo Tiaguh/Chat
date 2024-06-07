@@ -90,3 +90,35 @@
         }
     }
 }
+
+.home {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #a7bcff;
+
+    .container {
+        width: 65vw;
+        height: 80vh;
+
+        display: flex;
+
+        border: 1px #FFF solid;
+        border-radius: 10px;
+
+        overflow-x: hidden;
+        
+        .sidebar {
+            flex: 1;
+            background-color: #3e3c61;
+        } 
+
+        .chat {
+            flex: 2;
+        }
+    }
+}
