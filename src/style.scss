@@ -164,6 +164,55 @@
                     padding-inline: 15px;
                 }
             }
+
+            .search {
+                border: 1px solid #808080;
+
+                .searchForm {
+                    padding: 10px;
+
+                    input {
+                        background-color: transparent;
+                        border: none;
+
+                        color: #FFF;
+
+                        outline: none;
+
+                        &::placeholder {
+                            color: #d3d3d3;
+                        }
+                    }
+                }
+
+                .userChat {
+                    display: flex;
+                    align-items: center;
+
+                    padding: 10px;
+
+                    gap: 10px;
+
+                    color: #FFF;
+
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #2f2d52;
+                    }
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+
+                        border-radius: 50%;
+
+                        object-fit: cover;
+                    }
+                }
+
+            }
+
         }
 
         .chat {
