@@ -148,21 +148,21 @@
                         object-fit: cover;
                     }
 
+                    button {
+                        background-color: #5d5b8d;
+                        color: #ddddf7;
+
+                        font-size: 10px;
+
+                        border: none;
+
+                        cursor: pointer;
+
+                        padding: 8px;
+                        padding-inline: 15px;
+                    }
                 }
 
-                button {
-                    background-color: #5d5b8d;
-                    color: #ddddf7;
-
-                    font-size: 10px;
-
-                    border: none;
-
-                    cursor: pointer;
-
-                    padding: 8px;
-                    padding-inline: 15px;
-                }
             }
 
             .search {
@@ -184,35 +184,33 @@
                         }
                     }
                 }
-
-                .userChat {
-                    display: flex;
-                    align-items: center;
-
-                    padding: 10px;
-
-                    gap: 10px;
-
-                    color: #FFF;
-
-                    cursor: pointer;
-
-                    &:hover {
-                        background-color: #2f2d52;
-                    }
-
-                    img {
-                        width: 50px;
-                        height: 50px;
-
-                        border-radius: 50%;
-
-                        object-fit: cover;
-                    }
-                }
-
             }
 
+            .userChat {
+                display: flex;
+                align-items: center;
+
+                padding: 10px;
+
+                gap: 10px;
+
+                color: #FFF;
+
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #2f2d52;
+                }
+
+                img {
+                    width: 50px;
+                    height: 50px;
+
+                    border-radius: 50%;
+
+                    object-fit: cover;
+                }
+            }
         }
 
         .chat {
