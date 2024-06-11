@@ -210,11 +210,43 @@
 
                     object-fit: cover;
                 }
+
+                .userChatInfo {
+                    span {
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        color: #d3d3d3;
+                    }
+                }
             }
         }
 
         .chat {
             flex: 2;
+
+            .chatInfo {
+                height: 50px;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                padding: 10px;
+
+                background-color: #5d5b8d;
+
+                color: #d3d3d3;
+            }
+
+            .chatIcons {
+                display: flex;
+                gap: 10px;
+            }
+
         }
     }
 }
