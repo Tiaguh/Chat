@@ -4,6 +4,9 @@ import { IoVideocam } from "react-icons/io5";
 import { IoMdPersonAdd } from "react-icons/io";
 import { MdOutlineMoreHoriz } from "react-icons/md";
 
+import Messages from './Messages';
+import Input from './Input'
+
 function Chat() {
   return (
     <div className="chat">
@@ -27,6 +30,8 @@ function Chat() {
           />
         </div>
       </div>
+      <Messages />
+      <Input />
     </div>
   )
 }

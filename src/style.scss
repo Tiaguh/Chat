@@ -1,5 +1,5 @@
 .form-container {
-    widows: 100vw;
+    width: 100vw;
     height: 100vh;
 
     display: flex;
@@ -10,7 +10,7 @@
 
     .form-wrapper {
         width: 30vw;
-        height: 70vh;
+        height: 100vh;
 
         display: flex;
         flex-direction: column;
@@ -22,6 +22,8 @@
         background-color: #FFF;
 
         border-radius: 10px;
+
+        padding: 20px 60px;
 
         .logo {
             font-family: Arial, Helvetica, sans-serif;
@@ -103,7 +105,7 @@
 
     .container {
         width: 65vw;
-        height: 80vh;
+        height: 80%;
 
         display: flex;
 
@@ -114,6 +116,8 @@
 
         .sidebar {
             flex: 1;
+            height: 100%;
+            /* Ensure height is set */
             background-color: #3e3c61;
 
             .navbar {
@@ -227,6 +231,8 @@
 
         .chat {
             flex: 2;
+            height: 100%;
+            /* Ensure height is set */
 
             .chatInfo {
                 height: 50px;
@@ -245,6 +251,22 @@
             .chatIcons {
                 display: flex;
                 gap: 10px;
+            }
+
+            .messages {
+                height: calc(100% - 160px);
+
+                background-color: #ddddf7;
+
+                padding: 10px;
+            }
+
+            .input {
+                height: 50px;
+
+                padding: 10px;
+
+                background-color: #FFF;
             }
 
         }
