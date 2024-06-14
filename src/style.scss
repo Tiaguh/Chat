@@ -105,7 +105,7 @@
 
     .container {
         width: 65vw;
-        height: 80%;
+        height: 80vh;
 
         display: flex;
 
@@ -115,9 +115,9 @@
         overflow-x: hidden;
 
         .sidebar {
-            flex: 1;
+            width: 22vw;
             height: 100%;
-            /* Ensure height is set */
+            
             background-color: #3e3c61;
 
             .navbar {
@@ -232,7 +232,6 @@
         .chat {
             flex: 2;
             height: 100%;
-            /* Ensure height is set */
 
             .chatInfo {
                 height: 50px;
@@ -254,7 +253,7 @@
             }
 
             .messages {
-                height: calc(100% - 160px);
+                height: 100%;
 
                 background-color: #ddddf7;
 
