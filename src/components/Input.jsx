@@ -1,5 +1,8 @@
 import React from 'react'
 
+import { MdPhotoLibrary } from "react-icons/md";
+import { TfiClip } from "react-icons/tfi";
+
 export default function Input() {
   return (
     <div className="input">
@@ -8,14 +11,24 @@ export default function Input() {
         placeholder="Type something..."
       />
       <div className="send">
-        <img src="" alt="" />
+        <MdPhotoLibrary
+          color="#000"
+          size={25}
+          style={{ cursor: "pointer" }}
+        />
+
         <input
           type="file"
           style={{ display: "none" }}
           id="file"
         />
+
         <label htmlFor="file">
-          <img src="" alt="" />
+          <TfiClip
+            color="#000"
+            size={25}
+            style={{ cursor: "pointer" }}
+          />
         </label>
         <button>Send</button>
       </div>
