@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Navbar() {
+export default function Navbar() {
   return (
     <div className="navbar">
       <span className="logo">Chat App</span>
@@ -16,4 +16,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+// making menu

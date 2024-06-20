@@ -1,3 +1,21 @@
+@mixin mobile {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (max-width: 1220px) {
+        @content;
+    }
+}
+
 .form-container {
     width: 100vw;
     height: 100vh;
@@ -135,6 +153,10 @@
 
                 .logo {
                     font-weight: bold;
+
+                    @include tablet{
+                        display: none;
+                    }
                 }
 
                 .user {
@@ -270,7 +292,8 @@
                     display: flex;
                     gap: 20px;
 
-                    margin-bottom: 20px;
+                    margin-top: 5px;
+                    margin-bottom: 15px;
 
                     .messageInfo {
                         display: flex;
