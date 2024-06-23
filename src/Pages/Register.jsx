@@ -4,7 +4,6 @@ import { auth } from "../firebase";
 import { MdPhoto } from "react-icons/md";
 
 export default function Register() {
-
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -13,17 +12,15 @@ export default function Register() {
         const password = e.target[2].value;
         const file = e.target[3].files[0];
 
-        // Usar a instância auth importada
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                // Signed in 
                 const user = userCredential.user;
-                // ...
+                console.log(user);
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                // ..
+                console.error(`Error (${errorCode}): ${errorMessage}`);
             });
     }
 
@@ -47,7 +44,7 @@ export default function Register() {
                     </label>
                     <button>Sign Up</button>
                 </form>
-                <p>You do have an account? Login</p>
+                <p>Already have an account? Login</p>
             </div>
         </div>
     );

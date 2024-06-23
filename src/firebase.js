@@ -1,16 +1,13 @@
-import 'dotenv/config';
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
-console.log(process.env.FIREBASE_API_KEY);
-
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.FIREBASE_PROJECT_ID,
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.FIREBASE_APP_ID
+  apiKey: "AIzaSyCl4SU6nZ_EhWwVxmhyXa1EMRwnWvIkdXQ",
+  authDomain: "chat-25baa.firebaseapp.com",
+  projectId: "chat-25baa",
+  storageBucket: "chat-25baa.appspot.com",
+  messagingSenderId: "722125712183",
+  appId: "1:722125712183:web:799c7c4d949b9a471a08b2"
 };
 
 export const app = initializeApp(firebaseConfig);
