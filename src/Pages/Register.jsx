@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 
-import { auth, storage } from "../firebase";
+import { auth, storage, db } from "../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+
+import { doc, setDoc } from "firebase/firestore"; 
 
 import { MdPhoto } from "react-icons/md";
 
@@ -34,9 +36,17 @@ export default function Register() {
                             displayName,
                             photoURL: downloadURL,
                         })
+                        await setDoc(doc(db, "users", response.user.uid), {
+                            uid: response.user.uid,
+                            displayName,
+                            email,
+                            photoURL: downloadURL,
+                        })
                     });
                 }
             );
+
+
         } catch (error) {
             setError(true)
         }
