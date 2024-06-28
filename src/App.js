@@ -6,8 +6,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Register from './Pages/Register';
 import Login from './Pages/Login';
 import Home from './Pages/Home';
+import { useContext } from 'react';
+import { AuthContext } from './context/AuthContext';
 
 export default function App() {
+  const {currentUser} = useContext(AuthContext)
+
+  console.log(currentUser);
+
   return (
     <div>
       <Router>

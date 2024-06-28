@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { MdPhoto } from "react-icons/md";
-
 export default function Login() {
     return (
         <div className="form-container">
