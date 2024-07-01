@@ -7,7 +7,7 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 
 import { MdPhoto } from "react-icons/md";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Navigate } from 'react-router-dom';
 
 export default function Register() {
     const [error, setError] = useState(false)
@@ -79,7 +79,7 @@ export default function Register() {
                     <button>Sign Up</button>
                     {error && <span>Something went wrong</span>}
                 </form>
-                <p>Already have an account? Login</p>
+                <p>Already have an account? <Link to="/register">Login</Link></p>
             </div>
         </div>
     );
