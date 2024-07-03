@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 
-import { collection, query, where, getDocs, doc, setDoc } from "firebase/firestore";
+import { collection, query, where, getDocs, doc, setDoc, updateDoc, serverTimestamp, getDoc } from "firebase/firestore";
 import { db } from "../firebase"
 
 import { AuthContext } from "../context/AuthContext"
@@ -33,15 +33,31 @@ function Search() {
     const combinedId = currentUser.uid > user.uid ? currentUser.uid + user.uid : user.uid + currentUser.uid
 
     try {
-      const res = await getDocs(db, "users", combinedId)
+      const res = await getDoc(doc, "users", combinedId)
 
       if (!res.exists()) {
-        await setDoc(doc, (db,"chats", combinedId), { messages: [] })
+        await setDoc(doc(db, "chats", combinedId), { messages: [] })
+
+        await updateDoc(doc(db, "userChats", currentUser.uid), {
+          [combinedId + ".userInfo"]: {
+            uid: user.uid,
+            displayName: user.displayName,
+            photoUrl: user.photoUrl
+          },
+          [combinedId + ".date"]: serverTimestamp()
+        });
+        await updateDoc(doc(db, "userChats", user.uid), {
+          [combinedId + ".userInfo"]: {
+            uid: currentUser.uid,
+            displayName: currentUser.displayName,
+            photoUrl: currentUser.photoUrl
+          },
+          [combinedId + ".date"]: serverTimestamp()
+        })
       }
-    } catch (err) {
-
-    }
-
+    } catch (err) { }
+    setUser(null)
+    setUserName("")
   }
 
   return (
@@ -52,6 +68,7 @@ function Search() {
           placeholder="Find a user..."
           onChange={e => setUserName(e.target.value)}
           onKeyDown={handleKey}
+          value={userName}
         />
       </div>
       {err && <span>User not found!</span>}
