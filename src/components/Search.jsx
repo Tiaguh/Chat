@@ -42,7 +42,7 @@ function Search() {
           [combinedId + ".userInfo"]: {
             uid: user.uid,
             displayName: user.displayName,
-            photoUrl: user.photoUrl
+            photoURL: user.photoURL
           },
           [combinedId + ".date"]: serverTimestamp()
         });
@@ -50,7 +50,7 @@ function Search() {
           [combinedId + ".userInfo"]: {
             uid: currentUser.uid,
             displayName: currentUser.displayName,
-            photoUrl: currentUser.photoUrl
+            photoURL: currentUser.photoURL
           },
           [combinedId + ".date"]: serverTimestamp()
         })
@@ -73,7 +73,7 @@ function Search() {
       </div>
       {err && <span>User not found!</span>}
       {user && <div className="userChat" onClick={handleSelect} >
-        <img src={user.photoUrl} />
+        <img src={user.photoURL} />
         <div className="userChatInfo">
           <span>{user.displayName}</span>
         </div>

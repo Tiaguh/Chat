@@ -11,7 +11,7 @@ export default function Navbar() {
       <span className="logo">Chat App</span>
       <div className="user">
         <img
-          src={currentUser.photoUrl}
+          src={currentUser.photoURL}
           alt=""
         />
         <span>{currentUser.displayName}</span>
