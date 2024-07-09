@@ -7,11 +7,15 @@ import { MdOutlineMoreHoriz } from "react-icons/md";
 import Messages from './Messages';
 import Input from './Input'
 
-function Chat() {
+import { ChatContext } from '../context/ChatContext';
+
+export default function Chat() {
+  const { data } = useContext(ChatContext)
+
   return (
     <div className="chat">
       <div className="chatInfo">
-        <span>Jane</span>
+        <span>{data.user?.displayName}</span>
         <div className="chatIcons">
           <IoVideocam
             color="#e2e2e2"
@@ -35,5 +39,3 @@ function Chat() {
     </div>
   )
 }
-
-export default Chat
