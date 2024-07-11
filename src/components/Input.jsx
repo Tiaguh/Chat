@@ -1,14 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { MdPhotoLibrary } from "react-icons/md";
 import { TfiClip } from "react-icons/tfi";
 
+import { AuthContext } from '../context/AuthContext';
+import { ChatContext } from '../context/ChatContext';
+
 export default function Input() {
+  const [text, setText] = useState("")
+  const [img, setImg] = useState(null)
+
+  const { currentUser } = useContext(AuthContext)
+  const { data } = useContext(ChatContext)
+
+  const handleSend = () => {
+
+  }
+
   return (
     <div className="input">
       <input
         type="text"
         placeholder="Type something..."
+        onChange={e=>setText(e.target.value)}
       />
       <div className="send">
         <MdPhotoLibrary
@@ -21,6 +35,7 @@ export default function Input() {
           type="file"
           style={{ display: "none" }}
           id="file"
+          onChange={e=>setImg(e.target.files[0])}
         />
 
         <label htmlFor="file">
@@ -30,7 +45,7 @@ export default function Input() {
             style={{ cursor: "pointer" }}
           />
         </label>
-        <button>Send</button>
+        <button onClick={handleSend}>Send</button>
       </div>
     </div>
   )
