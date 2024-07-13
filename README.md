@@ -1,8 +1,11 @@
 <h2>Chat App</h2>
 
 <p>
-  Desenvolvi esse projeto acompanhando tutorial de um youtuber chamado LamaDev, nele aprendi a desenvolver esse chat usando React e Firebase.
+  Desenvolvi esse projeto acompanhando o tutorial de um youtuber chamado LamaDev, nele aprendi a desenvolver esse chat usando React e Firebase.
 </p>
+
+<p>Link do vídeo:</p>
+<p>https://www.youtube.com/watch?v=k4mjF4sPITE&ab_channel=LamaDev</p>
 
 <p>As tecnologias que usei foram:</p>
 
