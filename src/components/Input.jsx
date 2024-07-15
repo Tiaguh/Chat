@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 
 import { MdPhotoLibrary } from "react-icons/md";
 import { TfiClip } from "react-icons/tfi";
@@ -9,7 +9,7 @@ import { Timestamp, arrayUnion, doc, serverTimestamp, updateDoc } from 'firebase
 
 import { v4 as uuid } from "uuid"
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
-import { storage } from '../firebase';
+import { db, storage } from '../firebase';
 
 export default function Input() {
   const [text, setText] = useState("")
@@ -26,7 +26,7 @@ export default function Input() {
 
       uploadTask.on(
         (error) => {
-          setError(true)
+          
         },
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
@@ -77,6 +77,7 @@ export default function Input() {
         type="text"
         placeholder="Type something..."
         onChange={e => setText(e.target.value)}
+        value={text}
       />
       <div className="send">
         <MdPhotoLibrary
